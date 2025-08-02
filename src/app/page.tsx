@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Briefcase, Bot, FileDown, ArrowRight, ScanSearch, FilePlus2, Sparkles, Download, GanttChartSquare, Star } from 'lucide-react';
 import AppHeader from '@/components/AppHeader';
 import { AppLogo } from '@/components/AppLogo';
+import MagicBentoLanding from '@/components/MagicBentoLanding';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import React, { useRef } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -168,7 +169,7 @@ export default function LandingPage() {
       <main className="flex-1 overflow-x-hidden">
         <section ref={heroRef} className="w-full py-20 md:py-32 lg:py-40 xl:py-48 bg-gray-50 dark:bg-gray-900/50 relative overflow-hidden">
            <motion.div
-            className="container px-4 md:px-6 text-center"
+            className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center"
             style={{ y: heroTextY, opacity: heroTextOpacity }}
           >
             <motion.div
@@ -200,7 +201,7 @@ export default function LandingPage() {
 
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden" ref={gridRef}>
             <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
-           <div className="container px-4 md:px-6 relative z-10">
+           <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
             <motion.div
               className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
               initial="hidden"
@@ -224,36 +225,15 @@ export default function LandingPage() {
                 rotateX: smoothRotateX,
                 rotateZ: smoothRotateZ,
               }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 [transform-style:preserve-3d]"
+              className="[transform-style:preserve-3d]"
             >
-              {features.map((feature, index) => (
-                <motion.div key={index}
-                 variants={cardVariants}
-                 initial="hidden"
-                 whileInView="visible"
-                 viewport={{ once: true, amount: 0.5 }}
-                 whileHover={{ scale: 1.05, y: -10, boxShadow: "0px 20px 30px hsla(var(--primary) / 0.1)" }}
-                 className="[transform-style:preserve-3d]"
-                >
-                  <Card className="h-full bg-card/60 dark:bg-card/40 backdrop-blur-sm border-primary/10 overflow-hidden text-center">
-                    <CardHeader>
-                        <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
-                            {feature.icon}
-                        </div>
-                    </CardHeader>
-                    <CardContent>
-                      <CardTitle className="font-heading text-xl mb-2">{feature.title}</CardTitle>
-                      <p className="text-muted-foreground">{feature.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
+              <MagicBentoLanding />
             </motion.div>
           </div>
         </section>
 
         <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900/50" ref={howItWorksRef}>
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
             <motion.div
               className="flex flex-col items-center justify-center space-y-4 text-center"
               initial="hidden"
@@ -287,7 +267,7 @@ export default function LandingPage() {
         </section>
 
         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
             <motion.div
               className="flex flex-col items-center justify-center space-y-4 text-center"
               initial="hidden"
@@ -341,7 +321,7 @@ export default function LandingPage() {
 
 
         <section id="cta" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
             <motion.div
               className="flex flex-col items-center justify-center space-y-4 text-center bg-primary/5 dark:bg-primary/10 p-8 md:p-12 rounded-2xl"
               initial="hidden"
@@ -365,7 +345,7 @@ export default function LandingPage() {
 
       </main>
 
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 lg:px-8 border-t max-w-7xl mx-auto">
         <div className="flex items-center">
          <AppLogo />
         </div>

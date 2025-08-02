@@ -21,7 +21,7 @@ const AppHeader = ({ auth: showAuthNav = false }: { auth?: boolean }) => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
+      <div className="max-w-7xl mx-auto flex h-14 items-center px-4 md:px-6 lg:px-8">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <AppLogo />
@@ -71,23 +71,23 @@ const AppHeader = ({ auth: showAuthNav = false }: { auth?: boolean }) => {
             <DarkModeToggle />
           </div>
           {!user ? (
-            <nav className="flex items-center">
-              <Button asChild variant="ghost">
+            <nav className="flex items-center gap-2">
+              <Button asChild variant="ghost" size="sm">
                 <Link href="/auth/sign-in">Login</Link>
               </Button>
-              <Button asChild>
+              <Button asChild size="sm">
                 <Link href="/auth/sign-up">Sign Up</Link>
               </Button>
             </nav>
           ) : (
-             <nav className="flex items-center gap-2">
-                <Button asChild variant="ghost">
+             <nav className="flex items-center gap-1 md:gap-2">
+                <Button asChild variant="ghost" size="sm" className="hidden sm:flex">
                     <Link href="/dashboard"><LayoutDashboard className="w-4 h-4 mr-2" />Dashboard</Link>
                 </Button>
-                <Button asChild>
+                <Button asChild size="sm" className="hidden sm:flex">
                   <Link href="/preview">Preview Resume <Bot className="w-4 h-4 ml-2" /></Link>
                 </Button>
-                 <Button asChild variant="outline" onClick={signOut}>
+                 <Button asChild variant="outline" size="sm" onClick={signOut}>
                     <Link href="/">Logout</Link>
                 </Button>
               </nav>

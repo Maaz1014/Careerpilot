@@ -404,7 +404,7 @@ export default function PreviewPage() {
     <SidebarProvider>
       <div className="min-h-screen bg-muted/40 no-print">
         <AppHeader auth={true} />
-        <main className="container mx-auto px-4 py-8">
+        <main className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
           <div className="flex justify-between items-center mb-6 flex-wrap gap-4">
             <Button variant="outline" onClick={() => router.push('/profile')}>
               <ArrowLeft className="mr-2 h-4 w-4" />

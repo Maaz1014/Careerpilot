@@ -111,7 +111,7 @@ export default function ProfilePage() {
         </Sidebar>
         <div className="flex flex-col flex-1">
           <AppHeader auth={true} />
-          <main className="flex-1 p-4 md:p-8 overflow-y-auto">
+          <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto max-w-4xl mx-auto w-full">
             <div className="mb-8">
               <h1 className="font-heading text-3xl font-bold tracking-tight">Build Your Profile</h1>
               <p className="text-muted-foreground mt-1">

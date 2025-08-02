@@ -1,0 +1,38 @@
+{
+  "node": {
+    "408d9b1a5b62fdd62b3deb7b8930ffec3311f0d4a5": {
+      "workers": {
+        "app/interview/page": {
+          "moduleId": "[project]/.next-internal/server/app/interview/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/interview-coach.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/interview/page": "action-browser"
+      }
+    },
+    "40b85d8e7f232f1ec31a457b6f37c26e7d1b676b16": {
+      "workers": {
+        "app/interview/page": {
+          "moduleId": "[project]/.next-internal/server/app/interview/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/interview-coach.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/interview/page": "action-browser"
+      }
+    },
+    "40df54dc97d2c08e4f45255889a5b6f0e595133b1f": {
+      "workers": {
+        "app/interview/page": {
+          "moduleId": "[project]/.next-internal/server/app/interview/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/interview-coach.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/interview/page": "action-browser"
+      }
+    }
+  },
+  "edge": {}
+}

@@ -62,8 +62,8 @@ export default function MarketInsights() {
           Get AI-powered insights into job market trends, in-demand skills, and salary benchmarks for any role.
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="grid md:grid-cols-2 gap-4 mb-6">
+      <CardContent className="p-4 md:p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div className="space-y-2">
             <Label htmlFor="job-title-insights">Job Title</Label>
             <Input
